@@ -11,13 +11,24 @@ class ArrayFunctions {
     void display(int[] array) {
         System.out.println("Array: " + Arrays.toString(array));
     }
+
     // Separate and display odd and even numbers from an array
     void oddEven(int[] array) {
         ArrayList<Integer> even = new ArrayList<>();
         ArrayList<Integer> odd = new ArrayList<>();
+
         for (int num : array) {
             if (num % 2 == 0) even.add(num); // Add even numbers
             else odd.add(num); // Add odd numbers
+            if (num % 2 == 0){
+                even.add(num); // Add even numbers
+            }    
+            else{
+                odd.add(num); // Add odd numbers
+            }    
         }
+        System.out.println("\n--- Odd/Even Separation ---");
+        display(even); // Display even numbers
+        display(odd); // Display odd numbers
     }
 }
