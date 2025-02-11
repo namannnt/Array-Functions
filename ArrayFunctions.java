@@ -46,8 +46,8 @@ class ArrayFunctions {
         //Display the output for the minDist
         System.out.println("\n--- Minimum Consecutive Difference ---");
         System.out.println("Minimum difference: " + minDifference + " at index: " + index);
-    }        
     }    
+
     // Convert an array to an ArrayList
     private ArrayList<Integer> arrayToArrayList(int[] array) {
         ArrayList<Integer> list = new ArrayList<>();
@@ -56,6 +56,7 @@ class ArrayFunctions {
         }     
         return list;
     }
+
     // Convert an ArrayList to an array
     private int[] arrayListToArray(ArrayList<Integer> list) {
         int[] array = new int[list.size()];
@@ -63,5 +64,25 @@ class ArrayFunctions {
             array[i] = list.get(i); // Copy elements to array
         }     
         return array;
+    }
+    // Convert array to ArrayList and vice versa, then display both
+    void displayConversions(int[] array) {
+        System.out.println("\n--- Array Conversion Demo ---");
+        ArrayList<Integer> arrayList = arrayToArrayList(array); // Convert array to ArrayList
+        System.out.print("Converted to ArrayList: ");
+        display(arrayList); // Display ArrayList
+        int[] newArray = arrayListToArray(arrayList); // Convert ArrayList back to array
+        System.out.print("Converted back to array: ");
+        display(newArray); // Display array
+    }
+    // Convert array to ArrayList and vice versa, then display both
+    void displayConversions(int[] array) {
+        System.out.println("\n--- Array Conversion Demo ---");
+        ArrayList<Integer> arrayList = arrayToArrayList(array); // Convert array to ArrayList
+        System.out.print("Converted to ArrayList: ");
+        display(arrayList); // Display ArrayList
+        int[] newArray = arrayListToArray(arrayList); // Convert ArrayList back to array
+        System.out.print("Converted back to array: ");
+        display(newArray); // Display array
     }
 }
