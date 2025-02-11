@@ -30,10 +30,12 @@ class ArrayFunctions {
         display(even); // Display even numbers
         display(odd); // Display odd numbers
     }
+
     // Find and display the minimum difference between consecutive elements
     void minDif(int[] array) {
         int minDifference = Integer.MAX_VALUE;
         int index = -1;
+
         for (int i = 0; i < array.length - 1; i++) {
             int currentDiff = Math.abs(array[i] - array[i + 1]); // Calculate difference
             if (currentDiff < minDifference) {
@@ -41,5 +43,8 @@ class ArrayFunctions {
                 index = i; // Update index
             }
         }
+        //Display the output for the minDist
+        System.out.println("\n--- Minimum Consecutive Difference ---");
+        System.out.println("Minimum difference: " + minDifference + " at index: " + index);
     }        
 }
