@@ -18,8 +18,6 @@ class ArrayFunctions {
         ArrayList<Integer> odd = new ArrayList<>();
 
         for (int num : array) {
-            if (num % 2 == 0) even.add(num); // Add even numbers
-            else odd.add(num); // Add odd numbers
             if (num % 2 == 0){
                 even.add(num); // Add even numbers
             }    
@@ -27,8 +25,21 @@ class ArrayFunctions {
                 odd.add(num); // Add odd numbers
             }    
         }
+
         System.out.println("\n--- Odd/Even Separation ---");
         display(even); // Display even numbers
         display(odd); // Display odd numbers
     }
+    // Find and display the minimum difference between consecutive elements
+    void minDif(int[] array) {
+        int minDifference = Integer.MAX_VALUE;
+        int index = -1;
+        for (int i = 0; i < array.length - 1; i++) {
+            int currentDiff = Math.abs(array[i] - array[i + 1]); // Calculate difference
+            if (currentDiff < minDifference) {
+                minDifference = currentDiff; // Update minimum difference
+                index = i; // Update index
+            }
+        }
+    }        
 }
